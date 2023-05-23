@@ -25,8 +25,8 @@ for entry in d:
     #print(len(l));
     A = np.array(l, dtype=np.float32)
     A /= 255.0;
-    avg = np.average(A);
-    A -= avg;
+    #avg = np.average(A);
+    #A -= avg;
     #print(A);
     AA.append(A);
     im.close();
@@ -34,4 +34,12 @@ print("Stacking:");
 B = np.stack(AA, axis=-1, dtype=np.float32);
 print(len(B));
 print(len(B[0]));
-np.save("training_matrix", B);
+BM = B.mean(1);
+np.save("average_face", BM);
+print(len(BM));
+BM = BM[:, np.newaxis]
+print(len(BM));
+B -= BM;
+print(len(B));
+print(len(B[0]));
+#np.save("training_matrix_v2", B);
