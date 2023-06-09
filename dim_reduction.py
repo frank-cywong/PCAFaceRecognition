@@ -19,7 +19,7 @@ d = training_data["training_images"];
 
 print("Loaded data!");
 
-K = 2000; # components in a face
+K = 400; # components in a face
 
 face_bases = u[:, 0:K];
 s_vals = s[0:K];
