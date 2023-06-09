@@ -1,0 +1,1 @@
+put this in a directory, and then in the parent directory of this, have the img_align_celeba or other dataset folderie.parent(img_align_celeba) \ - PCAFaceRecognition \ - img_align_celeba
